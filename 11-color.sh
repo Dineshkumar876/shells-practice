@@ -1,5 +1,5 @@
   #!/bin/bash
-  R="\e[31m"
+  R="\e[35m"
   N="\e[0m"
 
 USERID=$(id -u)
