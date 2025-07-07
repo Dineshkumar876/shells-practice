@@ -15,3 +15,7 @@ echo -e "\033[33m This is yellow text!\033[0m"
 # This is red text! (in red color)
 # This is green text! (in green color)
 # This is yellow text! (in yellow color)
+echo -e "\033[37;44m White text on a blue background!\033[0m"
+
+# Output:
+# White text on a blue background! (white text on a blue background)
