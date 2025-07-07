@@ -1,9 +1,5 @@
  #!/bin/bash
-B= "\e[30m"
-R="\e[31m"
-G="\e[32m"
-Y="\e[33m"
-N="\e[0m"
+
 USERID=$(id -u)
 
 if [ $USERID -ne 0 ]
@@ -11,14 +7,14 @@ then
     echo "ERROR:: Please run this script with root access"
     exit 1 #give other than 0 upto 127
 else
-    echo -e "$R You are running with root access $N"
+    echo "You are running with root access"
 fi
 
 # validate functions takes input as exit status, what command they tried to install
 VALIDATE(){
     if [ $1 -eq 0 ]
     then
-        echo -e "$Y Installing $2 is ... SUCCESS $N"
+        echo "Installing $2 is ... SUCCESS"
     else
         echo "Installing $2 is ... FAILURE"
         exit 1
@@ -28,8 +24,8 @@ VALIDATE(){
 dnf list installed mysql
 if [ $? -ne 0 ]
 then
-    echo -e "$G MySQL is not installed... going to install it"
-    dnf install mysql -y $N
+    echo "MySQL is not installed... going to install it"
+    dnf install mysql -y
     VALIDATE $? "MySQL"
 else
     echo "MySQL is already installed...Nothing to do"
