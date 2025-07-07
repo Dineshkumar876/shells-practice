@@ -19,3 +19,8 @@ echo -e "\033[37;44m White text on a blue background!\033[0m"
 
 # Output:
 # White text on a blue background! (white text on a blue background)
+source bash-colors.sh
+echo "${green}This is green text!${reset}"
+
+# Output:
+# This is green text! (in green color)
