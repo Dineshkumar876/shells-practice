@@ -41,3 +41,4 @@ else
     echo "$package is already installed...Nothing to do" | tee -a $LOG_FILE
 fi
 done
+  
