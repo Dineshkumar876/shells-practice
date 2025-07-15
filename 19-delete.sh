@@ -10,7 +10,7 @@ echo "All log files in $LOG_DIR have been deleted."
 
 
 # Specify the directory and retention period
-LOG_DIR="/path/to/logs"
+LOG_DIR='/path/to/logs'
 RETENTION_DAYS=7
 
 # Find and delete log files older than X days
